@@ -1,0 +1,7 @@
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\bin\Debug\GreenSpoof.exe.config
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\bin\Debug\GreenSpoof.exe
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\bin\Debug\GreenSpoof.pdb
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\obj\Debug\GreenSpoof.csprojAssemblyReference.cache
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\obj\Debug\GreenSpoof.csproj.CoreCompileInputs.cache
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\obj\Debug\GreenSpoof.exe
+C:\Users\Green\source\repos\GreenSpoof\GreenSpoof\obj\Debug\GreenSpoof.pdb
