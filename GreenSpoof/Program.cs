@@ -39,6 +39,9 @@ namespace GreenSpoof
                 // * DriverDesc
                 Console.WriteLine("DriverDesc: " + DriverDesc());
 
+                // This file for some reason seems to have some data cached that will give bus kick.
+                // C:\Program Files\Epic Games\Fortnite\FortniteGame\PersistentDownloadDir
+
                 Console.WriteLine("ProductId: " + ProductId());
                 Console.WriteLine("SusClientId: " + SusClientId());
 
