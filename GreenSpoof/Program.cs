@@ -32,7 +32,13 @@ namespace GreenSpoof
                 Console.WriteLine("BIOSReleaseDate: " + BIOSReleaseDate());
                 Console.WriteLine("SystemManufacturer: " + SystemManufacturer());
                 Console.WriteLine("SystemProductName: " + SystemProductName());
+                Console.WriteLine("ProcessorNameString: ", ProcessorNameString());
+
+                // TODO: Change to
+                // HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\0000
+                // * DriverDesc
                 Console.WriteLine("DriverDesc: " + DriverDesc());
+
                 Console.WriteLine("ProductId: " + ProductId());
                 Console.WriteLine("SusClientId: " + SusClientId());
 
@@ -56,10 +62,11 @@ namespace GreenSpoof
         static string BIOSReleaseDate() { return GetRegistryKey(@"HARDWARE\Description\System\BIOS", "BIOSReleaseDate"); }
         static string SystemManufacturer() { return GetRegistryKey(@"HARDWARE\Description\System\BIOS", "SystemManufacturer"); }
         static string SystemProductName() { return GetRegistryKey(@"HARDWARE\Description\System\BIOS", "SystemProductName"); }
-
         static string DriverDesc() { return GetRegistryKeyOther(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion", "DriverDesc"); }
         static string ProductId() { return GetRegistryKeyOther(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion", "ProductId"); }
         static string SusClientId() { return GetRegistryKeyOther(@"SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate", "SusClientId"); }
+        static string ProcessorNameString() { return GetRegistryKeyOther(@"Hardware\Description\System\CentralProcessor\0", "ProcessorNameString"); }
+        // static string Something() { return GetRegistryKeyOther(@"System\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001", ""); }
 
         static void ListHW()
         {
@@ -220,7 +227,7 @@ namespace GreenSpoof
                         Console.WriteLine(string.Format("Key Not Found: {0}", key));
                         return "";
                     }
-                        
+
                     object rv = rk.GetValue(subKey);
                     if (rv == null)
                     {
